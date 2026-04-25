@@ -1,0 +1,110 @@
+---
+layout: layouts/base.njk
+title: Contact Us - Free Estimate
+bodyClass: "path-contact"
+permalink: /contact/index.html
+---
+<main role="main" id="main-content" style="padding: 0 var(--layout-spacing);">
+  <article class="contact-content">
+    <h1>Contact Us</h1>
+    <p>Ready to take your basement to a new level? Fill out the form below for a free estimate, or call us at <strong>{{ site.phone }}</strong>.</p>
+
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact/thanks/">
+      <input type="hidden" name="form-name" value="contact" />
+      <p class="hidden" aria-hidden="true">
+        <label>Don't fill this out: <input name="bot-field" /></label>
+      </p>
+
+      <!-- Contact Information -->
+      <div class="form-group">
+        <label for="name">Your Name <span aria-hidden="true">*</span></label>
+        <input type="text" id="name" name="name" required autocomplete="name" />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address <span aria-hidden="true">*</span></label>
+        <input type="email" id="email" name="email" required autocomplete="email" />
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" autocomplete="tel" />
+      </div>
+
+      <!-- Address Information -->
+      <div class="form-group">
+        <label for="street-address">Street Address</label>
+        <input type="text" id="street-address" name="street-address" autocomplete="street-address" />
+      </div>
+
+      <div class="form-group">
+        <label for="street-address-2">Street Address Line 2</label>
+        <input type="text" id="street-address-2" name="street-address-2" autocomplete="address-line2" />
+      </div>
+
+      <div class="form-group">
+        <label for="city">City</label>
+        <input type="text" id="city" name="city" autocomplete="address-level2" />
+      </div>
+
+      <div class="form-group">
+        <label for="state">State</label>
+        <input type="text" id="state" name="state" value="CO" readonly autocomplete="address-level1" />
+      </div>
+
+      <div class="form-group">
+        <label for="zip-code">Zip Code</label>
+        <input type="text" id="zip-code" name="zip-code" autocomplete="postal-code" />
+      </div>
+
+      <!-- Project Details -->
+      <div class="form-group">
+        <fieldset>
+          <legend>Basement Remodeling Options</legend>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="basement-options" value="Walk-out Basement" /> Walk-out Basement</label>
+            <label><input type="checkbox" name="basement-options" value="Bathroom" /> Bathroom</label>
+            <label><input type="checkbox" name="basement-options" value="Office" /> Office</label>
+            <label><input type="checkbox" name="basement-options" value="Bedroom" /> Bedroom</label>
+            <label><input type="checkbox" name="basement-options" value="Weight Room" /> Weight Room</label>
+            <label><input type="checkbox" name="basement-options" value="Fireplace" /> Fireplace</label>
+            <label><input type="checkbox" name="basement-options" value="HVAC Storage" /> HVAC Storage</label>
+            <label><input type="checkbox" name="basement-options" value="Unfinished Storage Area" /> Unfinished Storage Area</label>
+            <label><input type="checkbox" name="basement-options" value="Finished Storage Area" /> Finished Storage Area</label>
+            <label><input type="checkbox" name="basement-options" value="Entertainment Center" /> Entertainment Center</label>
+            <label><input type="checkbox" name="basement-options" value="Home Theater Center" /> Home Theater Center</label>
+            <label><input type="checkbox" name="basement-options" value="Wet Bar" /> Wet Bar</label>
+            <label><input type="checkbox" name="basement-options" value="Dry Bar" /> Dry Bar</label>
+            <label><input type="checkbox" name="basement-options" value="Cabinets" /> Cabinets</label>
+            <label><input type="checkbox" name="basement-options" value="Kitchen" /> Kitchen</label>
+            <label><input type="checkbox" name="basement-options" value="Custom Shelves" /> Custom Shelves</label>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="form-group">
+        <label for="project-date">Project Date</label>
+        <input type="date" id="project-date" name="project-date" />
+      </div>
+
+      <div class="form-group">
+        <label for="square-footage">About how many square feet is your basement?</label>
+        <input type="text" id="square-footage" name="square-footage" />
+      </div>
+
+      <div class="form-group">
+        <label for="house-age">About how many years old is your house?</label>
+        <input type="text" id="house-age" name="house-age" />
+      </div>
+
+      <div class="form-group">
+        <label for="message">Tell us about your project <span aria-hidden="true">*</span></label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+      </div>
+
+      <div class="form-submit">
+        <button type="submit" class="btn">Send Message</button>
+      </div>
+    </form>
+  </article>
+</main>

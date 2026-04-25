@@ -1,0 +1,51 @@
+---
+pagination:
+  data: galleryCategories
+  size: 1
+  alias: category
+permalink: /finished-basements/{{ category.slug }}/index.html
+layout: layouts/base.njk
+bodyClass: "path-finished-basements"
+eleventyComputed:
+  title: "{{ category.name }} Photos"
+---
+<main role="main" id="main-content" style="padding: 0 var(--layout-spacing); margin-bottom: 2rem;">
+  <h1>{{ category.name }}</h1>
+
+  <nav class="photo-type-nav" aria-label="View type">
+    <ul>
+      <li><a href="/finished-basements/">Photos</a></li>
+      <li><a href="/basement-videos/">Videos</a></li>
+    </ul>
+  </nav>
+
+  <nav class="photo-category-nav" aria-label="Photo category">
+    <h2>Photo Category</h2>
+    <ul>
+      <li><a href="/finished-basements/">All</a></li>
+      {% for cat in galleryCategories %}
+      <li>
+        <a href="/finished-basements/{{ cat.slug }}/"
+           {% if cat.slug == category.slug %}class="is-active" aria-current="page"{% endif %}>
+          {{ cat.name }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+
+  {% if category.images.length > 0 %}
+  <div class="gallery-grid pswp-gallery">
+    {% for img in category.images %}
+    <a href="{{ img.src }}"
+       class="gallery-item"
+       data-pswp-width="650"
+       data-pswp-height="650">
+      <img loading="lazy" src="{{ img.thumb }}" alt="{{ img.alt }}" width="300" height="250" />
+    </a>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p>No photos in this category yet.</p>
+  {% endif %}
+</main>

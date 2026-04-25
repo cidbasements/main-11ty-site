@@ -1,0 +1,45 @@
+<footer role="contentinfo">
+
+  <div class="footer-first">
+    <div class="footer-info">
+      <p>Custom Integrated Designs &copy; {{ buildYear }}<br>
+      {{ site.phone }} | <a href="sms:{{ site.phoneRaw }}">SMS Message</a><br>
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      <nav aria-label="Footer navigation">
+        <ul class="footer-nav">
+          {% for item in site.footerNav %}
+          <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+    <div class="badges-and-social">
+      <ul class="badges">
+        <li>
+          <a href="{{ site.homeadvisor }}">
+            <img src="https://www.homeadvisor.com/images/sp-badges/soap-solid-border.png?sp=34494601&key=9f94b6900c0407225f891508a11d26ba"
+              alt="Custom Integrated Designs is HomeAdvisor Screened &amp; Approved" />
+          </a>
+        </li>
+      </ul>
+      <ul class="social-links">
+        <li><a href="{{ site.social.facebook }}"><img src="/assets/images/facebook.svg" alt="Facebook" /></a></li>
+        <li><a href="{{ site.social.youtube }}"><img src="/assets/images/youtube.svg" alt="YouTube" /></a></li>
+        <li><a href="{{ site.social.twitter }}"><img src="/assets/images/twitter.svg" alt="Twitter" /></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-third">
+    <h4>Offering Personalized Service and Attention to Detail Since 1977 in the Following Colorado Areas:</h4>
+    <ul class="service-areas">
+      {% for area in site.serviceAreas %}
+      <li>
+        {% if area.url %}<a href="{{ area.url }}">{{ area.label }}</a>{% else %}{{ area.label }}{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    <p class="footer-login"><a href="{{ site.constructLogin }}">Log in</a></p>
+  </div>
+
+</footer>

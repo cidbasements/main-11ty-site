@@ -1,0 +1,26 @@
+---
+layout: layouts/base.njk
+title: Projects
+bodyClass: "ant-one-sidebar ant-sidebar-second path-projects"
+permalink: /projects/index.html
+---
+<div class="page-layout has-sidebar">
+  <main role="main" id="main-content">
+    <h1>{{ title }}</h1>
+    <div class="projects-listing">
+      {% for project in collections.projects %}
+      <article class="project-teaser">
+        <h3><a href="{{ project.url }}">{{ project.data.title }}</a></h3>
+        {% if project.data.description %}
+        <div class="node__content">
+          <p>{{ project.data.description }}</p>
+        </div>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </main>
+  <aside class="layout-sidebar-second" role="complementary">
+    {% include "components/sidebar.njk" %}
+  </aside>
+</div>

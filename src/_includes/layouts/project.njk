@@ -1,0 +1,58 @@
+---
+layout: layouts/base.njk
+bodyClass: "ant-one-sidebar ant-sidebar-second path-node page-node-type-projects"
+---
+<div class="project-layout">
+  <main role="main" id="main-content" class="project-main">
+    <article class="project-content">
+      <h1>{{ title }}</h1>
+      <div class="project-body">
+        {{ content | safe }}
+      </div>
+      {% if mapLat and mapLon %}
+      <div class="project-map">
+        <h2>{{ mapTitle or title }}, Colorado</h2>
+        <iframe
+          loading="lazy"
+          class="google-map"
+          src="https://maps.google.com/maps?q={{ mapLat }},{{ mapLon }}&z=9&output=embed"
+          width="100%"
+          height="450"
+          style="border:0;"
+          allowfullscreen
+          title="Map of {{ title }}">
+        </iframe>
+      </div>
+      {% endif %}
+    </article>
+  </main>
+
+  {% if images and images.length > 0 %}
+  <aside class="project-gallery" role="complementary">
+    <h2>Pictures</h2>
+    <div class="gallery-grid pswp-gallery" id="project-gallery">
+      {% for img in images %}
+      <a href="{{ img.src }}"
+         class="gallery-item"
+         data-pswp-width="650"
+         data-pswp-height="650">
+        <img loading="lazy" src="{{ img.thumb }}" alt="{{ img.alt }}" />
+      </a>
+      {% endfor %}
+    </div>
+    <a href="/finished-basements/" class="btn">View all photos</a>
+  </aside>
+  {% endif %}
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": {{ (site.url + "/") | toJSON | safe }}},
+    {"@type": "ListItem", "position": 2, "name": "Projects", "item": {{ (site.url + "/projects/") | toJSON | safe }}},
+    {"@type": "ListItem", "position": 3, "name": {{ title | toJSON | safe }}, "item": {{ (site.url + page.url) | toJSON | safe }}}
+  ]
+}
+</script>

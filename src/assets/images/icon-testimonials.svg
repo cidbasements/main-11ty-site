@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <path d="M6 10h36a4 4 0 014 4v18a4 4 0 01-4 4H20l-8 8v-8H6a4 4 0 01-4-4V14a4 4 0 014-4z" fill="#d4e4d4" stroke="#4a7a4a" stroke-width="2"/>
+  <text x="14" y="30" font-family="Georgia,serif" font-size="22" font-weight="bold" fill="#4a7a4a">&quot;&quot;</text>
+  <path d="M26 28h26a4 4 0 014 4v14a4 4 0 01-4 4h-4v6l-6-6H26a4 4 0 01-4-4V32a4 4 0 014-4z" fill="#e8f0e8" stroke="#4a7a4a" stroke-width="2"/>
+  <line x1="32" y1="38" x2="50" y2="38" stroke="#4a7a4a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="32" y1="44" x2="44" y2="44" stroke="#4a7a4a" stroke-width="2" stroke-linecap="round"/>
+</svg>

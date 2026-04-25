@@ -1,0 +1,31 @@
+---
+layout: layouts/base.njk
+title: Basement Videos
+bodyClass: "ant-one-sidebar ant-sidebar-second path-basement-videos"
+permalink: /basement-videos/index.html
+---
+<div class="page-layout has-sidebar">
+  <main role="main" id="main-content">
+    <h1>{{ title }}</h1>
+    <div class="videos-grid">
+      {% for video in collections.videos %}
+      <article class="video-teaser">
+        <a href="{{ video.url }}">
+          {% if video.data.thumbnail %}
+          <div class="video-thumb-wrap">
+            <img loading="lazy"
+              src="{{ video.data.thumbnail }}"
+              alt="{{ video.data.title }}" />
+            <span class="play-icon" aria-hidden="true"></span>
+          </div>
+          {% endif %}
+          <h2>{{ video.data.title }}</h2>
+        </a>
+      </article>
+      {% endfor %}
+    </div>
+  </main>
+  <aside class="layout-sidebar-second" role="complementary">
+    {% include "components/sidebar.njk" %}
+  </aside>
+</div>

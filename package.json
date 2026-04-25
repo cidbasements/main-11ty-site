@@ -1,0 +1,28 @@
+{
+  "name": "cid-basements-11ty",
+  "version": "1.0.0",
+  "description": "CID Basements - Custom Integrated Designs Ltd.",
+  "scripts": {
+    "start": "concurrently \"npm run watch:eleventy\" \"npm run watch:css\"",
+    "build": "npm run build:css && npm run build:eleventy",
+    "build:eleventy": "eleventy",
+    "build:css": "postcss src/assets/css/main.css -o _site/assets/css/main.css",
+    "watch:eleventy": "eleventy --serve",
+    "watch:css": "postcss src/assets/css/main.css -o _site/assets/css/main.css --watch",
+    "extract": "node scripts/extract-content.js"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.1.0",
+    "markdown-it": "^14.1.0",
+    "postcss": "^8.4.49",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.17",
+    "turndown": "^7.2.2"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "slugify": "^1.6.6"
+  }
+}

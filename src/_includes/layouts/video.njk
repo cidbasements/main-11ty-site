@@ -1,0 +1,58 @@
+---
+layout: layouts/base.njk
+bodyClass: "ant-one-sidebar ant-sidebar-second path-node page-node-type-videos"
+---
+<div class="page-layout has-sidebar">
+  <main role="main" id="main-content">
+    <article class="video-content">
+      <h1>{{ title }}</h1>
+      {% if youtubeId %}
+      <div class="video-embed">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/{{ youtubeId }}"
+          title="{{ title }}"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+      {% endif %}
+      <div class="video-body">
+        {{ content | safe }}
+      </div>
+    </article>
+  </main>
+  <aside class="layout-sidebar-second" role="complementary">
+    {% include "components/sidebar.njk" %}
+  </aside>
+</div>
+
+{% if youtubeId %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": {{ title | toJSON | safe }},
+  "description": {{ (description or title) | toJSON | safe }},
+  "thumbnailUrl": {{ ("https://img.youtube.com/vi/" + youtubeId + "/maxresdefault.jpg") | toJSON | safe }},
+  "embedUrl": {{ ("https://www.youtube.com/embed/" + youtubeId) | toJSON | safe }},
+  "contentUrl": {{ ("https://www.youtube.com/watch?v=" + youtubeId) | toJSON | safe }},
+  "uploadDate": "{{ date | htmlDateString }}"
+}
+</script>
+{% endif %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": {{ (site.url + "/") | toJSON | safe }}},
+    {"@type": "ListItem", "position": 2, "name": "Videos", "item": {{ (site.url + "/basement-videos/") | toJSON | safe }}},
+    {"@type": "ListItem", "position": 3, "name": {{ title | toJSON | safe }}, "item": {{ (site.url + page.url) | toJSON | safe }}}
+  ]
+}
+</script>

@@ -1,0 +1,24 @@
+---
+layout: layouts/base.njk
+title: Testimonials
+bodyClass: "ant-one-sidebar ant-sidebar-second path-testimonials"
+permalink: /testimonials/index.html
+---
+<div class="page-layout has-sidebar">
+  <main role="main" id="main-content">
+    <h1>{{ title }}</h1>
+    <div class="testimonials-header">
+      <a class="btn google-maps-feedback" href="{{ site.googleMapsUrl }}">View our feedback on Google maps</a>
+    </div>
+    <div class="testimonials-list">
+      {% for item in collections.testimonials %}
+      <div class="testimonial-item">
+        {{ item.templateContent | safe }}
+      </div>
+      {% endfor %}
+    </div>
+  </main>
+  <aside class="layout-sidebar-second" role="complementary">
+    {% include "components/sidebar.njk" %}
+  </aside>
+</div>

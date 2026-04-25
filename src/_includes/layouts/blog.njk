@@ -1,0 +1,61 @@
+---
+layout: layouts/base.njk
+bodyClass: "ant-one-sidebar ant-sidebar-second path-node page-node-type-page"
+ogType: article
+rssLink: true
+---
+<div class="page-layout has-sidebar">
+  <main role="main" id="main-content">
+    <article class="blog-post">
+      <h1>{{ title }}</h1>
+      {% if date %}
+      <time datetime="{{ date | htmlDateString }}" class="blog-date">{{ date | readableDate }}</time>
+      {% endif %}
+      <div class="blog-body">
+        {{ content | safe }}
+      </div>
+    </article>
+  </main>
+  <aside class="layout-sidebar-second" role="complementary">
+    {% include "components/sidebar.njk" %}
+  </aside>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ title | toJSON | safe }},
+  "description": {{ (description or "") | toJSON | safe }},
+  "datePublished": "{{ date | htmlDateString }}",
+  "author": {
+    "@type": "Organization",
+    "name": {{ site.fullTitle | toJSON | safe }},
+    "url": {{ site.url | toJSON | safe }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ site.fullTitle | toJSON | safe }},
+    "logo": {
+      "@type": "ImageObject",
+      "url": {{ (site.url + "/assets/images/cid.svg") | toJSON | safe }}
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ (site.url + page.url) | toJSON | safe }}
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": {{ (site.url + "/") | toJSON | safe }}},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": {{ (site.url + "/blog/") | toJSON | safe }}},
+    {"@type": "ListItem", "position": 3, "name": {{ title | toJSON | safe }}, "item": {{ (site.url + page.url) | toJSON | safe }}}
+  ]
+}
+</script>

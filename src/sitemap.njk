@@ -1,0 +1,62 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  {# Homepage #}
+  <url>
+    <loc>{{ site.url }}/</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  {# Primary static pages #}
+  <url><loc>{{ site.url }}/contact/</loc><lastmod>2025-01-01</lastmod><changefreq>yearly</changefreq><priority>0.8</priority></url>
+  <url><loc>{{ site.url }}/blog/</loc><lastmod>2025-01-01</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>{{ site.url }}/projects/</loc><lastmod>2025-01-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>{{ site.url }}/finished-basements/</loc><lastmod>2025-01-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>{{ site.url }}/testimonials/</loc><lastmod>2025-01-01</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>{{ site.url }}/basement-videos/</loc><lastmod>2025-01-01</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  {# Blog posts #}
+  {% for post in collections.blog %}
+  <url>
+    <loc>{{ site.url }}{{ post.url }}</loc>
+    {% if post.date %}<lastmod>{{ post.date | htmlDateString }}</lastmod>{% endif %}
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  {% endfor %}
+
+  {# Projects #}
+  {% for item in collections.projects %}
+  <url>
+    <loc>{{ site.url }}{{ item.url }}</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  {% endfor %}
+
+  {# Videos #}
+  {% for item in collections.videos %}
+  <url>
+    <loc>{{ site.url }}{{ item.url }}</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  {% endfor %}
+
+  {# Content pages #}
+  {% for item in collections.pages %}
+  <url>
+    <loc>{{ site.url }}{{ item.url }}</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  {% endfor %}
+
+</urlset>

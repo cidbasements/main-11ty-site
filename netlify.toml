@@ -1,0 +1,17 @@
+[build]
+  base = "11ty"
+  command = "npm run build"
+  publish = "_site"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[redirects]]
+  from = "/node/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/basement-customers/*"
+  to = "/testimonials"
+  status = 301

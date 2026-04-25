@@ -1,0 +1,135 @@
+{
+  "title": "CID Basements",
+  "fullTitle": "Custom Integrated Designs Ltd.",
+  "slogan": "Take your basement to a new level",
+  "email": "info@cidbasements.com",
+  "phone": "(303) 591-7100",
+  "phoneRaw": "3035917100",
+  "analytics": "UA-198471-1",
+  "url": "https://www.cidbasements.com",
+  "year": 2017,
+  "nav": [
+    {
+      "label": "Home",
+      "url": "/"
+    },
+    {
+      "label": "Services",
+      "url": "/basement-content/basement-finishing-and-remodeling-services/"
+    },
+    {
+      "label": "Contractors",
+      "url": "/basement-content/things-consider-when-comparing-general-contractors/"
+    },
+    {
+      "label": "Projects",
+      "url": "/projects/"
+    },
+    {
+      "label": "About",
+      "url": "/basement-content/about-our-basement-finishing-remodeling-company/"
+    },
+    {
+      "label": "Contact",
+      "url": "/contact/"
+    }
+  ],
+  "footerNav": [
+    {
+      "label": "Contact",
+      "url": "/contact/"
+    },
+    {
+      "label": "Perfect BBB Rating",
+      "url": "https://www.bbb.org/us/co/parker/profile/basement-remodeling/custom-integrated-designs-ltd-1296-32715"
+    },
+    {
+      "label": "Links",
+      "url": "/basement-content/links/"
+    },
+    {
+      "label": "Blog",
+      "url": "/blog/"
+    },
+    {
+      "label": "Accessibility",
+      "url": "/basement-content/accessibility/"
+    }
+  ],
+  "serviceAreas": [
+    {
+      "label": "Aurora",
+      "url": "/basement-content/basement-finishing-aurora-co/"
+    },
+    {
+      "label": "Castle Rock",
+      "url": "/basement-content/basement-finishing-castle-rock-co/"
+    },
+    {
+      "label": "Castle Pines areas",
+      "url": "/basement-content/basement-finishing-castle-pines-co/"
+    },
+    {
+      "label": "Elizabeth",
+      "url": null
+    },
+    {
+      "label": "Kiowa",
+      "url": null
+    },
+    {
+      "label": "Lone Tree",
+      "url": null
+    },
+    {
+      "label": "Parker",
+      "url": "/basement-finishing-parker-co/"
+    }
+  ],
+  "social": {
+    "facebook": "https://www.facebook.com/cidbasements",
+    "youtube": "https://www.youtube.com/channel/UCFrDtQFeCy2mE80kKGx7WkQ",
+    "twitter": "https://twitter.com/CIDbasements"
+  },
+  "homeadvisor": "https://www.homeadvisor.com/rated.CustomIntegratedDesigns.34494601.html",
+  "bbb": "https://www.bbb.org/us/co/parker/profile/basement-remodeling/custom-integrated-designs-ltd-1296-32715",
+  "constructLogin": "https://www.co-construct.com/skins/cid/default.aspx",
+  "googleMapsUrl": "https://www.google.com/maps/place/Custom+Integrated+Designs+Ltd/@39.5693185,-105.0193694,10z/data=!4m7!3m6!1s0x876d225d4e37cf0f:0x869f62d9e2e2ea0e!8m2!3d39.5553497!4d-104.7189509!9m1!1b1",
+  "sidebarPhotos": [
+    {
+      "src": "/assets/images/portfolio-picts/wine-cabinet-area-architectural-detail-nid127.jpg",
+      "alt": "Wine Cabinet Area with Architectural Detail"
+    },
+    {
+      "src": "/assets/images/portfolio-picts/custom-shelving-2-nid286.jpg",
+      "alt": "Custom Shelving 2"
+    }
+  ],
+  "sidebarVideos": [
+    {
+      "youtubeId": "xaIoa7H_WRs",
+      "title": "Video #4: Finished Basement in Highlands Ranch, CO",
+      "url": "/basement-videos/video-4-finished-basement-highlands-ranch-co/"
+    },
+    {
+      "youtubeId": "koTOVhihLtE",
+      "title": "Video #1: Basement Finishing in Highlands Ranch, CO",
+      "url": "/basement-videos/video-1-basement-finishing-highlands-ranch-co/"
+    }
+  ],
+  "heroImage": {
+    "src": "/assets/images/portfolio-picts/basement-remodel-built-art-displays-custom-architectural-wood-detailing-2021-nid533.jpg",
+    "alt": "basement remodel with built in art displays, custom architectural wood detailing, 2021"
+  },
+  "address": {
+    "addressLocality": "Parker",
+    "addressRegion": "CO",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "latitude": 39.5553497,
+    "longitude": -104.7189509
+  },
+  "foundingDate": "1977",
+  "defaultOgImage": "/assets/images/portfolio-picts/basement-remodel-built-art-displays-custom-architectural-wood-detailing-2021-nid533.jpg"
+}

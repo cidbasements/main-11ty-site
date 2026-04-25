@@ -1,0 +1,30 @@
+<div class="sidebar-inner">
+
+  {# Photos block #}
+  <div class="sidebar-block">
+    <h2>Photos</h2>
+    <div class="sidebar-photos">
+      {% for photo in site.sidebarPhotos %}
+      <img loading="lazy" src="{{ photo.src }}" alt="{{ photo.alt }}" width="225" height="225" />
+      {% endfor %}
+    </div>
+    <a href="/finished-basements/">View more photos</a>
+  </div>
+
+  {# Videos block #}
+  <div class="sidebar-block">
+    <h2>Videos</h2>
+    <div class="sidebar-videos">
+      {% for video in site.sidebarVideos %}
+      <a href="{{ video.url }}">
+        <img loading="lazy"
+          src="/assets/images/youtube/{{ video.youtubeId }}.jpg"
+          alt="{{ video.title }}"
+          width="225" height="225" />
+      </a>
+      {% endfor %}
+    </div>
+    <a href="/basement-videos/">View more videos</a>
+  </div>
+
+</div>

@@ -1,0 +1,14 @@
+<nav role="navigation" id="main-nav" aria-label="Main navigation">
+  <button class="menu-toggle" aria-controls="nav-menu" aria-expanded="false">
+    <span>Menu</span>
+  </button>
+  <ul id="nav-menu" class="nav-menu">
+    {% for item in site.nav %}
+    <li>
+      <a href="{{ item.url }}"{% if page.url == item.url %} class="is-active" aria-current="page"{% endif %}>
+        {{ item.label }}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>
