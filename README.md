@@ -46,3 +46,4 @@ npm run build     # Outputs to _site/
 ## Deploy
 
 Pushing to `main` triggers the GitHub Actions workflow (`.github/workflows/deploy.yml`), which builds the site and publishes `_site/` to the `gh-pages` branch.
+
